@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .banner{
+          background-image: url(image/pic3.jpg);
+          background-repeat: no-repeat; background-size:cover;
+        }
+    </style>
+  </head>
+  <body>
+      <header>
+          <nav class="w-[88%] mx-auto flex p-3 justify-around mt-4 items-center">
+             <div class="flex space-x-2 items-center">
+              <h1 class="font-medium text-3xl text-black">Travell BD</h1>
+              <img src="image/plane.png" class="w-[32px] h-[32px]">
+             </div>
+               <ul class="md:flex items-center space-x-7 hidden">
+                  <li class="text-[18px] font-medium text-black">Services</li>
+                  <li class="text-[18px] font-medium text-black">About</li>
+                  <li class="text-[18px] font-medium text-black">Blog</li>
+                  <li class="relative">
+                        <input type="text" class="p-3 border-2 border-black rounded-lg w-[200px]" placeholder="Search Place">
+                        <button class="absolute right-1 top-3">
+                          <img src="image/search-interface-symbol.png" alt="" srcset="" class="w-[27px] h-[26px]">
+                        </button>
+                  </li>
+               </ul>
+               <div class="relative inline-block md:hidden">
+                <input type="text" class="p-3 border-2 border-black rounded-lg w-[180px]" placeholder="Search Place">
+                <button class="absolute right-1 top-3">
+                  <img src="image/search-interface-symbol.png" alt="" srcset="" class="w-[27px] h-[26px]">
+                </button>
+               </div>
+               <div class="inline-block md:hidden">
+                  <img src="image/hamburger.png" alt="" class="w-[25px] h-[22px]">
+               </div>
+          </nav>
+          <div class="w-[82%] h-[90vh] mx-auto banner flex justify-center pt-4 rounded-lg">
+               <div class=" space-y-4 p-2">
+                   <h1 class="text-5xl">Hey! Lets Go</h1>
+                   <h1 class="text-5xl">Explore the World</h1>
+                   <p class="text-[1.2rem] text-black">Why traveling is important for us? <br>
+                    Travel exposes us to different cultures and ancient traditions and through these  <br> encounters, we learn to embrace and celebrate both our similarities and our differences.</p>
+                   <input type="number" class="rounded-lg p-3 border-2 border-black"
+                    placeholder="Your Budget?" id="inp">
+                   <button class="p-2 bg-white rounded-lg border-black w-[100px] text-[20px] font-medium"
+                    onclick="clicked()" id="btn" disabled>
+                    Submitt</button>
+                    <h1 class="text-2xl font-medium text-black hidden px-3 py-2 bg-white rounded-lg w-[200px]" id="main-budget">
+                      Budget:<span class="" id="budget"></span>$</h1>
+
+               </div>
+          </div>
+   
+
+     </header>
+      <main>
+        
+      </main>
+      <footer>
+        
+      </footer> 
+      <script>
+          const inp=document.getElementById('inp');
+          inp.addEventListener('keyup',function(){
+          
+              if(event.target.value!==''){
+                const btn=document.getElementById('btn');
+                  btn.disabled=false;
+              }
+              else{
+                  const btn=document.getElementById('btn');
+                  btn.disabled=true;
+              }
+          })
+          function clicked(){
+             const subBudget=document.getElementById('budget');
+             subBudget.innerText=inp.value;
+             const budget=document.getElementById('main-budget');
+             budget.classList.remove('hidden');
+          }
+
+      </script>
+  </body>
+</html>
