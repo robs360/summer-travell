@@ -122,7 +122,8 @@
           <br> will also play a big role in determining where you can travel.
         </p>
 
-
+         <h1 class="w-[340px] mx-auto bg-gray-300 p-4 text-center text-[20px] font-bold">
+          Your current budgets is:<span id="cuurent-budget">0</span>$</h1>
       </div>
 
       <div class="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
@@ -197,6 +198,8 @@
     function clicked() {
       const subBudget = document.getElementById('budget');
       subBudget.innerText = inp.value;
+      const currentBudget=document.getElementById('cuurent-budget');
+      currentBudget.innerText=inp.value;
       const budget = document.getElementById('main-budget');
       budget.classList.remove('hidden');
     }
