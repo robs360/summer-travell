@@ -132,14 +132,18 @@
           <img src="image/shajek.jpg" alt="" class="w-[350px] h-[350px] rounded-lg">
           <p class="font-medium text-black my-3">Its natural environment and is surrounded by
             mountains, dense forest, and grassland hill tracks.</p>
-            <h1 class="font-medium text-[18px]">Price:<span>140</span>$</h1>
+            <h1 class="font-medium text-[18px]">
+              Price:
+              <span>140</span>$</h1>
         <button class="bg-gray-400 px-2 py-1 add-btn font-[18px] font-medium">Add to card</button>
         </div>
         <div class="bg-[#FFFFFF00] p-4 shadow-2xl w-[375px] rounded-lg mx-auto">
           <img src="image/bandarban.jpg" alt="" class="w-[350px] h-[350px] rounded-lg">
           <p class="font-medium text-black my-3">The three highest peak of Bangladesh - Tahjindong 1280 meters,
             also known as bijoy, Mowdok Mual 1052m, and Keokradong 1230m</p>
-            <h1 class="font-medium text-[18px]">Price:<span>160</span>$</h1>
+            <h1 class="font-medium text-[18px]">
+              Price:
+              <span>160</span>$</h1>
           <button class="bg-gray-400 px-2 py-1 add-btn font-[18px] font-medium">Add to card</button>
         </div>
         <div class="bg-[#FFFFFF00] p-4 shadow-2xl w-[375px] rounded-lg mx-auto">
@@ -148,7 +152,9 @@
             The city is has a population of 500,000 people having a
             high population density. It is one of the largest cities in Bangladesh
           </p>
-          <h1 class="font-medium text-[18px]">Price:<span>130</span>$</h1>
+          <h1 class="font-medium text-[18px]">
+            Price:
+            <span>130</span>$</h1>
           <button class="bg-gray-400 px-2 py-1 add-btn font-[18px] font-medium">Add to card</button>
         </div>
         <div class="bg-[#FFFFFF00] p-4 shadow-2xl w-[375px] rounded-lg mx-auto">
@@ -156,14 +162,18 @@
           <p class="font-medium text-black my-3">St. Martin is one of the most beautiful
             visiting places of Bangladesh. It has fresh blue water with corals, beautiful sandy beaches,
             a lot of coconut trees, and huge natural beauties.</p>
-            <h1 class="font-medium text-[18px]">Price:<span>180</span>$</h1>
+            <h1 class="font-medium text-[18px]">
+              Price:
+              <span>180</span>$</h1>
           <button class="bg-gray-400 px-2 py-1 add-btn font-[18px] font-medium">Add to card</button>
         </div>
         <div class="bg-[#FFFFFF00] p-4 shadow-2xl w-[375px] rounded-lg mx-auto">
           <img src="image/dhaka.jpg" alt="" class="w-[350px] h-[350px] rounded-lg">
           <p class="font-medium text-black my-3">Dhaka has a renowned culinary heritage.
             The city's culture is known for its rickshaws, kacchi biryani</p>
-            <h1 class="font-medium text-[18px]">Price:<span>150</span>$</h1>
+            <h1 class="font-medium text-[18px]">
+              Price:
+              <span>150</span>$</h1>
           <button class="bg-gray-400 px-2 py-1 add-btn font-[18px] font-medium">Add to card</button>
         </div>
 
@@ -171,12 +181,21 @@
           <img src="image/nepal.webp" alt="" class="w-[350px] h-[350px] rounded-lg">
           <p class="font-medium text-black my-3">Nepal is the birth place of Lord Buddha. World's
             highest peak, Mount Everest 8844m is located at nepal</p>
-            <h1 class="font-medium text-[18px]">Price:<span>440</span>$</h1>
+            <h1 class="font-medium text-[18px]">
+              Price:
+              <span>440</span>$</h1>
           <button class="bg-gray-400 px-2 py-1 add-btn font-[18px] font-medium">Add to card</button>
         </div>
 
       </div>
 
+    </section>
+
+    <section class="bg-[#F7F8F8] mx-auto w-[96%] md:w-[86%] min-h-[220px]
+    flex justify-center items-center border-t-2 border-green-300 rounded-2xl">
+          <div class="bg-gray-300">
+             
+          </div>
     </section>
   </main>
   <footer>
@@ -195,6 +214,15 @@
         btn.disabled = true;
       }
     })
+    const allBtn=document.getElementsByClassName('add-btn');
+    for(const btn of allBtn){
+       btn.addEventListener('click',clickedbtn);
+    }
+    function clickedbtn(event){
+        const Btn=event.target.parentNode.childNodes;
+        console.log(Btn);
+    }
+
     function clicked() {
       const subBudget = document.getElementById('budget');
       subBudget.innerText = inp.value;
