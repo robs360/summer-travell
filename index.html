@@ -12,6 +12,10 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+    #calculate li{
+      display: flex; padding: 8px; justify-content: space-between;
+      background-color:#F7F8F8;
+    }
   </style>
 </head>
 
@@ -72,7 +76,7 @@
       <div class="flex justify-evenly items-center flex-col-reverse md:flex-row">
 
         <div>
-          <div class="collapse collapse-arrow bg-base-200">
+          <div class="collapse collapse-arrow bg-base-200 mb-3">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">
               Our main branch
@@ -83,7 +87,7 @@
           </div>
 
 
-          <div class="collapse collapse-arrow bg-base-200">
+          <div class="collapse collapse-arrow bg-base-200 mb-3">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
 
@@ -199,7 +203,7 @@
 
     <section class="bg-[#F7F8F8] mx-auto w-[96%] md:w-[86%] min-h-[220px]
     flex justify-center items-center border-t-2 border-green-300 rounded-2xl">
-          <div class="bg-gray-300">
+          <div class="bg-gray-400" id="calculate">
                
           </div>
     </section>
@@ -227,7 +231,17 @@
     function clickedbtn(event){
         const BtnTarget=event.target.parentNode.childNodes[5].childNodes[1];
         const placeName=event.target.parentNode.childNodes[3];
-        console.log(placeName.innerText);
+        const calculation=document.getElementById('calculate')
+        const li=document.createElement('li');
+        const p1=document.createElement('p');
+        const p2=document.createElement('p');
+        const place=placeName.innerText;
+        p1.innerText=place;
+        const price=BtnTarget.innerText;
+        p2.innerText=price;
+        li.appendChild(p1);
+        li.appendChild(p2);
+        calculation.appendChild(li);
     }
 
     function clicked() {
